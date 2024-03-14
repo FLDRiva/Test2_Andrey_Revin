@@ -1,22 +1,23 @@
 <template>
   <div class="search-container">
-    <img :src="img">
+    <img :src="getImgUrl(image)" class="user-container__img" />
   </div>
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        imgSearch: {
-          img: '../assets/img/group.jpg',
-        }
-      }
+export default {
+  props: {
+    image: {
+      type: String,
+      default: "",
     },
-  }  
-
-
+  },
+  methods: {
+    getImgUrl(img) {
+      return require("../assets/img/" + img);
+    },
+  },
+};
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

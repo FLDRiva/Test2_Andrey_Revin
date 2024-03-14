@@ -6,7 +6,7 @@
       <span>Team</span>
     </div>
     <div class="top_bar">
-      <search-input />
+      <search-input :image="'group.jpg'" />
       <span>
         <img src="../images/Notification.png" />
       </span>
